@@ -1,13 +1,13 @@
 
 
-### Instalation
+### Installation
 
 
 - Create a data base in post gresql and table name is login
 
 ![](./static/screenshot/db.png)
 
-- Enter a following details in db.py
+- Enter the following details in db.py
    - DB_NAME 
    - DB_USER 
    - DB_PASSWORD 
@@ -25,6 +25,6 @@
 
 - Click the url
 
-### Instraction
+### Instructions
 
 - Do not run "DatasetCreationCode.ipynb" file

@@ -1,6 +1,6 @@
-#BMI Calculator
+# BMI Calculator
 
-##Installation
+## Installation
 
 
 - Create a data base in post gresql and table name is login

@@ -1,13 +1,13 @@
-# BMI Calculator
 
-## Installation
+
+### Instalation
 
 
 - Create a data base in post gresql and table name is login
 
 ![](./static/screenshot/db.png)
 
-- Enter the following details in db.py
+- Enter a following details in db.py
    - DB_NAME 
    - DB_USER 
    - DB_PASSWORD 
@@ -25,6 +25,6 @@
 
 - Click the url
 
-## Instructions
+### Instraction
 
 - Do not run "DatasetCreationCode.ipynb" file

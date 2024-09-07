@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Restriction</title>
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+  <style>
+    body {
+      background: url("{{ url_for('static', filename='img/body-background.jpg') }}") center center/cover no-repeat fixed;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+    .card-container {
+      margin: auto;
+      width: 80%;
+      max-width: 600px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .tips-list {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    .tips-list li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+      <div class="logo me-auto">
+        <h1><a href="/admin">FITMATE</a></h1>
+      </div>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto" href="/admin">Home</a></li>
+          <li><a class="nav-link scrollto" href="/bmi_calculator">BMI Calculate</a></li>
+          <li><a class="nav-link scrollto" href="/logout">Logout</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card card-container">
+          <div class="card-body">
+            <h2 class="card-title text-center text-danger"><u>Age Restriction</u></h2>
+            <p class="card-text text-center">
+              For individuals aged 16 years or younger, we cannot calculate a BMI value accurately. Maintaining a healthy lifestyle is important for overall well-being. Here are some tips to help maintain a good BMI value:
+            </p>
+            <ul class="tips-list">
+              <li>Engage in regular physical activity, such as walking, jogging, or swimming.</li>
+              <li>Eat a balanced diet rich in fruits, vegetables, whole grains, and lean proteins.</li>
+              <li>Avoid excessive consumption of sugary and high-fat foods.</li>
+              <li>Stay hydrated by drinking plenty of water throughout the day.</li>
+              <li>Get adequate sleep and manage stress levels effectively.</li>
+            </ul>
+            <p class="text-center">
+              <a href="/normal_exercise" class="btn btn-primary">View Recommended Exercises</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+</body>
+
+</html>

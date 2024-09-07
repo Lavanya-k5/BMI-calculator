@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>FITEMATE - Manage Users</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='img_admin/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='img_admin/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor_admin/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor_admin/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor_admin/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor_admin/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor_admin/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css_admin/style.css') }}" rel="stylesheet">
+  <style>
+     body {
+    position: relative;
+    background: url('static/img_admin/one-hiking-lifestyle-summer-yoga.jpg') center center/cover no-repeat fixed;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ensure body covers full viewport height */
+    width: 100vw; /* Ensure body covers full viewport width */
+    overflow: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity to make it more or less dim */
+    z-index: 1; /* Ensure the overlay is above the background image */
+  }
+  main, header, footer {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+  }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo me-auto">
+        <h1><a href="index.html">FITMATE</a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto " href="/admin1">Home</a></li>
+          <li><a class="nav-link scrollto" href="/logout">Logout</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    <section class="section mt-5" >
+      <div class="container">
+      
+        <table class="table  table-stripped table-hover" >
+          
+          <thead style="font-family: 'Times New Roman', Times, serif;font-weight: bold;font-size: larger;">
+            <tr class="table-primary">
+              <th scope="col">Sl No</th>
+              <th scope="col">Name</th>
+              <th scope="col">Age</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Height</th>
+              <th scope="col">Weight</th>
+              <th scope="col">BMI Value</th>
+              <th scope="col">Category</th>
+            </tr>
+          </thead>
+          <tbody style="font-family: 'Times New Roman', Times, serif;font-size: large;">
+            {% for index, user in enumerate(users, start=1) %}
+              <tr>
+                <th scope="row">{{ index }}</th>
+                <td>{{ user[4] }}</td> <!-- Name -->
+                <td>{{ user[0] }}</td> <!-- Username -->
+                <td>{{ user[5] }}</td> <!-- Password -->
+                <td>{{ user[1] }}</td>
+                <td>{{ user[2] }}</td>
+                <td>{{ user[3] }}</td>
+                <td>{{ user[6] }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='vendor_admin/purecounter/purecounter_vanilla.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor_admin/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor_admin/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor_admin/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor_admin/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor_admin/waypoints/noframework.waypoints.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor_admin/php-email-form/validate.js') }}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='js_admin/main.js') }}"></script>
+</body>
+
+</html>

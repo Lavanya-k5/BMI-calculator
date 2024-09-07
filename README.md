@@ -25,6 +25,3 @@
 
 - Click the url
 
-### Instruction
-
-- Do not run "DatasetCreationCode.ipynb" file

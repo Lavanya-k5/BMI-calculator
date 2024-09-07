@@ -1,6 +1,6 @@
 
 
-### Instalation
+### Installation
 
 
 - Create a data base in post gresql and table name is login
@@ -25,6 +25,6 @@
 
 - Click the url
 
-### Instraction
+### Instruction
 
 - Do not run "DatasetCreationCode.ipynb" file
